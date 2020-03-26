@@ -15,7 +15,7 @@ module.exports = {
             response.status(400).json({ error: 'ONG not found'});
         }
 
-        return response.json({ ong });
+        return response.json(ong);
     },
 
     async index(request, response) {
@@ -24,10 +24,3 @@ module.exports = {
         return response.json(ongs);
     }
 };
-
-// routes.get('/ongs', async (request, response) => {
-//     const ongs = await connection('ongs').select('*');
-
-//     return response.json(ongs);
-// });
-
